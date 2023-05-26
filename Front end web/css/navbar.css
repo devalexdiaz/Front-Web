@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+/* Estilo global aplicado a todos los elementos */
+
+* {
+    box-sizing: border-box; /* Define que el tamaño total de un elemento incluya el contenido, el padding y el borde */
+    margin: 0; /* Elimina los márgenes externos de todos los elementos */
+    padding: 0; /* Elimina el relleno interno de todos los elementos */
+    font-family: 'Roboto', sans-serif; /* Establece la fuente utilizada en todos los elementos como 'Roboto', una fuente sin remates */
+}
+
+/* Agregando los colores en variables para facilitar lectura y cambios del codigo*/
+:root {
+    --color-oscuro: #0741ad;
+    --color-oscuro-2: #084fd3;
+    --color-claro: #5BC0F8;
+    --color-blanco: #eaf4f4;
+}
+
+/* Agregando background con degradado*/
+body {
+    background: linear-gradient(to bottom, var(--color-blanco) 25%, var(--color-claro)); /* Se establece un fondo con un degradado de arriba hacia abajo empezando despues del 25% de la altura */
+    background-repeat: no-repeat;/* Se evita que el fondo se repita */
+    background-attachment: fixed;/* Se fija el fondo para que se desplace con el contenido */
+    background-size: 100% 100vh;/* El fondo se ajusta para cubrir el 100% del ancho y el 100% del alto de la ventana */
+}
+
+/* Estilos para el encabezado */
+.header {
+    display: flex;/* Aplica el modelo de caja flexible */
+    justify-content: flex-end; /* Alineación horizontal a la derecha */
+    align-items: center; /* Alineación vertical centrada */
+    height: 69px; /* Define la altura en 69px */
+    padding: 5px 10%; /* Relleno de 5 píxeles en la parte superior e inferior, 10% de relleno en los lados */
+}
+
+/* Estilos para el logotipo dentro del encabezado */
+.header .logo {
+    display: flex;/* Aplica el modelo de caja flexible */
+    cursor: pointer;/* Cambia el cursor a un puntero al pasar por encima */
+    margin-right: auto; /* Margen derecho automático para alinear a la izquierda */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+/* Estilos para la imagen del logotipo dentro del encabezado */
+.header .logo img {
+    height: 55px; /* Establece la altura de la imagen en 55 píxeles */
+    width: auto; /* Ajusta automáticamente el ancho de la imagen */
+    padding: 0.1rem;/* Agrega un pequeño relleno alrededor de la imagen */
+    transition: all 0.3s; /* Transición suave de 0.3 segundos para cambios de propiedades */
+}
+
+/* Estilos al hacer hover en la imagen del logotipo */
+.header .logo img:hover {
+    transform: scale(1.2); /* Escala la imagen a 1.2 veces su tamaño original al hacer hover */
+}
+
+/* Estilos para los enlaces de navegación dentro del encabezado */
+.header .nav-links {
+    list-style: none; /* Elimina los estilos de viñeta de la lista */
+    font-size: 16px; /* Establece tamaño de fuente en 16px */
+}
+
+/* Estilos para cada elemento de la lista de enlaces de navegación */
+.header .nav-links li {
+    display: inline-block; /* Los elementos de la lista se muestran en línea uno al lado del otro */
+    transition: all 0.3s; /* Transición suave de 0.3 segundos para cambios de propiedades */
+}
+
+/* Estilos al hacer hover en los elementos de la lista de enlaces de navegación */
+.nav-links li:hover {
+    transform: scale(1.1); /* Escala el elemento a 1.1 veces su tamaño original al hacer hover */
+}
+
+/* Estilos al hacer hover en los elementos de la lista de enlaces de navegación y enlaces de la capa de superposición */
+.header .nav-links li:hover,
+.overlay a:hover {
+    transform: scale(1.1);/* Escala el elemento a 1.1 veces su tamaño original al hacer hover */
+}
+
+/* Estilos para los enlaces de navegación dentro del encabezado */
+.header .nav-links a {
+    font-size: 700; /* Tamaño de fuente 700 */
+    color: var(--color-oscuro);  /* Establece el color del texto utilizando la variable --color-oscuro */
+    text-transform: uppercase;/* Transforma el texto a letras mayúsculas */
+    padding: 0.5rem 1rem; /* Establece el relleno superior e inferior de 0.5rem y el relleno izquierdo y derecho de 1rem */
+    margin: 0 0.5rem; /* Establece el margen superior e inferior en 0 y el margen izquierdo y derecho en 0.5rem */
+}
+
+/* Estilos al hacer hover en los enlaces de navegación */
+.header .nav-links a:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-oscuro);
+    border-radius: 50px;
+}
+
+/* Estilos para el menú desplegable */
+.menu {
+    display: none;
+}
+
+/* Estilos para los botones del encabezado */
+.header .btn button,
+.header .menu button {
+    background: var(--color-oscuro);/* Color de fondo del botón, utilizando una variable CSS llamada "--color-oscuro" */
+    margin-left: 20px;/* Margen izquierdo de 20 píxeles para separar el botón de otros elementos cercanos */
+    font-weight: 600;/* Peso de la fuente del texto del botón, establecido en 600 (negrita) */
+    font-size: 16px;/* Tamaño de la fuente del texto del botón, establecido en 16 píxeles */
+    text-transform: uppercase;/* Transforma el texto del botón a letras mayúsculas */
+    color: var(--color-blanco);/* Color del texto del botón, utilizando una variable CSS llamada "--color-blanco" */
+    padding: 9px 25px;/* Espacio interno (padding) de 9 píxeles en la parte superior e inferior y 25 píxeles en los lados izquierdo y derecho */
+    border: none;/* Sin borde alrededor del botón */
+    border-radius: 50px;/* Borde redondeado con un radio de 50 píxeles, creando una forma circular para el botón */
+    cursor: pointer;/* Cambia el cursor cuando se pasa sobre el botón, indicando que es un elemento interactivo */
+    transition: all 0.3s ease 0s;/* Transición suave de todos los estilos durante 0.3 segundos, con un efecto de aceleración (ease) */
+}
+
+
+/* Estilos al hacer hover en los botones del encabezado "Contacto" y "Menu" */
+.header .btn button:hover,
+.header .menu button:hover {
+    background-color: var(--color-oscuro-2);/* Cambiamos el color de fondo a "--color-oscuro-2" al hacer hover */
+    transform: scale(1.1);/* Aplicamos una escala de 1.1 al elemento al hacer hover */
+}
+
+/* Estilos para los enlaces en general dentro del encabezado */
+.header a {
+    text-decoration: none;/* Quitamos la decoración de subrayado de los enlaces */
+}
+
+/* Estilos para la superposición del menú móvil */
+.header .overlay {
+    height: 100%; /* Altura del elemento igual al 100% del contenedor */
+    width: 0; /* Ancho del elemento igual a 0, oculto inicialmente */
+    position: fixed; /* Posicionamiento fijo en la ventana del navegador */
+    z-index: 1; /* Capa de apilamiento, colocado encima de otros elementos */
+    left: 0; /* Alineado a la izquierda del contenedor */
+    top: 0; /* Alineado en la parte superior del contenedor */
+    background-color: var(--color-oscuro); /* Color de fondo definido por una variable CSS */
+    overflow: hidden; /* Oculta el contenido que se desborda del elemento */
+    transition: all 0.3s ease 0s; /* Transición animada para todos los cambios de propiedades durante 0.3 segundos */
+}
+
+/* Estilos para el contenido de la superposición */
+.header .overlay .overlay-content {
+    display: flex; /* Elemento de nivel de bloque que se muestra como una caja flexible */
+    height: 100%; /* Altura del elemento igual al 100% del contenedor */
+    flex-direction: column; /* Dirección de los elementos hijos, en columnas */
+    align-items: center; /* Alineación horizontal de los elementos hijos al centro */
+    justify-content: center; /* Alineación vertical de los elementos hijos al centro */
+}
+
+
+/* Estilos para los enlaces dentro de la superposición */
+.header .overlay a {
+    padding: 15px; /* Espaciado interno de 15 píxeles para los enlaces */
+    font-size: 36px; /* Tamaño de fuente de 36 píxeles para los enlaces */
+    display: block; /* Los enlaces se muestran como elementos de bloque */
+    transition: all 0.3s ease 0s; /* Transición de 0.3 segundos con efecto de animación suave para todos los cambios de propiedades */
+    font-weight: 700; /* Peso de fuente en negrita (700) para los enlaces */
+    color: var(--color-blanco); /* Color del texto de los enlaces (#eceff1) */
+}
+
+/* Estilos al hacer hover y enfocar en los enlaces de la superposición */
+.header .overlay a:hover,
+.header .overlay a:focus {
+    color: var(--color-claro); /* Cambio de color del texto de los enlaces a un color definido por una variable (--color-claro) al hacer hover o enfocar */
+}
+
+
+/* Estilos para el botón de cierre de la superposición */
+.header .overlay .close {
+    position: absolute; /* Posiciona el botón de cierre de manera absoluta */
+    top: 20px; /* Margen superior de 20 píxeles */
+    right: 45px; /* Margen derecho de 45 píxeles */
+    font-size: 65px; /* Tamaño de fuente de 65 píxeles */
+}
+
+.navbar-limit {
+    color: var(--color-claro); /* Color del texto es definido por una variable llamada "--color-claro" */
+}
+
+
+/* Estilos para la media query en pantallas con un ancho máximo de 900px */
+@media screen and (max-width: 900px) {
+    .nav-links, .btn {
+        display: none; /* Oculta los elementos con la clase "nav-links" y "btn" */
+    }
+    .menu {
+        display: inherit; /* Muestra el elemento con la clase "menu" según su configuración heredada */
+    }
+}
+
+@media screen and (max-height: 450px) {
+    /* Aplica estilos solo si la altura de la pantalla es igual o menor a 450px */
+
+    .header .overlay a {
+        font-size: 20px;
+    }
+    /* Cambia el tamaño de fuente de los enlaces dentro de la clase "overlay" que se encuentra dentro de la clase "header" a 20px */
+
+    .header .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    /* Cambia el tamaño de fuente del elemento con la clase "close" que se encuentra dentro de la clase "overlay" que a su vez está dentro de la clase "header" a 40px.
+       También establece la posición superior (top) en 15px y la posición derecha (right) en 35px */
+}

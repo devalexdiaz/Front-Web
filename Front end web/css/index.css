@@ -1,0 +1,44 @@
+/* Agregando los colores en variables para facilitar lectura y cambios del codigo*/
+:root {
+    --color-oscuro: #0741ad;
+    --color-oscuro-2: #084fd3;
+    --color-oscuro-3: #134074;
+    --color-oscuro-4: #011627;
+    --color-claro: #5BC0F8;
+    --color-blanco: #eaf4f4;
+}
+
+/* Establecer el main-container como una flexbox */
+.main-container {
+    height: calc(100vh - 71px); /* Hacer que el div ocupe toda la altura de la pantalla */
+    padding: 0 10% 71px; /* Añadir un espacio interno al div */
+    box-sizing: border-box; /* Incluir el padding en el tamaño total del div */
+}
+
+.container-texto{
+    display: flex; /* Establece el elemento como un contenedor flexible */
+    flex-direction: column; /* Establece la dirección de los elementos secundarios en una columna */
+    align-items: center; /* Centra los elementos secundarios horizontalmente dentro del contenedor */
+    justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */
+    padding: 4vh;
+}
+
+.container-texto h1{
+    font-size: 40px;
+    color: var(--color-oscuro);
+    font-weight: bold;
+}
+
+.container-texto p {
+    padding: 1vh 0;
+    color: var(--color-oscuro-3);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-hr {
+    width: 100%;
+    color: var(--color-claro);
+    margin-top: 1px;
+    border-style:dashed;
+}
