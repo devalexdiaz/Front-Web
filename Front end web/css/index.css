@@ -8,37 +8,75 @@
     --color-blanco: #eaf4f4;
 }
 
+
+
 /* Establecer el main-container como una flexbox */
 .main-container {
-    height: calc(100vh - 71px); /* Hacer que el div ocupe toda la altura de la pantalla */
-    padding: 0 10% 71px; /* Añadir un espacio interno al div */
+    height: calc(100vh - 14vh); /* Hacer que el div ocupe toda la altura de la pantalla */
+    padding: 0 10%;  /* Añadir un espacio interno al div */
     box-sizing: border-box; /* Incluir el padding en el tamaño total del div */
 }
 
+/* SECCIÓN DE TEXTO */
 .container-texto{
     display: flex; /* Establece el elemento como un contenedor flexible */
     flex-direction: column; /* Establece la dirección de los elementos secundarios en una columna */
     align-items: center; /* Centra los elementos secundarios horizontalmente dentro del contenedor */
     justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */
-    padding: 4vh;
+    padding: 4vh; /* margen interior */
 }
 
 .container-texto h1{
-    font-size: 40px;
-    color: var(--color-oscuro);
-    font-weight: bold;
+    font-size: 40px; /* Tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro); /* Color definido en la variable --color-oscuro */
+    font-weight: bold; /* Negrita */
 }
 
 .container-texto p {
-    padding: 1vh 0;
-    color: var(--color-oscuro-3);
-    font-size: 20px;
-    font-weight: bold;
+    padding: 1vh 0; /* Relleno vertical de 1 unidad de altura de viewport y sin relleno horizontal */
+    color: var(--color-oscuro-3); /* Color definido en la variable --color-oscuro-3 */
+    font-size: 20px; /* Tamaño de fuente de 20 píxeles */
+    font-weight: bold; /* Negrita */
 }
 
 .texto-hr {
-    width: 100%;
-    color: var(--color-claro);
-    margin-top: 1px;
-    border-style:dashed;
+    width: 100%; /* Anchura del elemento al 100% del contenedor */
+    color: var(--color-claro); /* Color definido en la variable --color-claro */
+    margin-top: 1px; /* Margen superior de 1 píxel */
+    border-style:dashed; /* Estilo de borde en guiones */
+}
+
+
+/* SECCIÓN DE IMAGENES */
+.container-imagenes {
+    display: flex; /* Uso de flexbox para la disposición de los elementos */
+    justify-content: space-between; /* Distribución equitativa de los elementos con espacios entre ellos */
+    height: 60vh; /* Altura de 60 unidades de altura de viewport */
+}
+
+.container-imagenes img {
+    position: relative; /* Añadimos posición relativa para permitir posicionar el texto */
+    width: 30%; /* Anchura del 30% del contenedor */
+    object-fit: cover; /* Ajuste del contenido de la imagen al contenedor */
+    border-radius: 20px; /* Radio de borde de 20 píxeles para dar esquinas redondeadas */
+    border: 2px solid var(--color-oscuro); /* Borde sólido de 2 píxeles con el color definido en la variable --color-oscuro */
+    transition: all 0.3s; /* Transición de todas las propiedades con una duración de 0.3 segundos */
+}
+
+.container-imagenes img:hover {
+    transform: scale(1.1); /* Aplicamos una escala de 1.1 al elemento al hacer hover */
+    border: 2px solid transparent; /* Agregamos un borde transparente en el estado hover */
+    filter: brightness(0.8); /* Aplicamos un filtro de brillo para oscurecer la imagen */
+}
+
+@media (max-width: 768px) { /* Cambia el valor "768px" según tus necesidades */
+    .container-imagenes {
+        height: 55vh; /* Cambia la altura a automática para dispositivos móviles */
+    }
+}
+
+@media (max-width: 400px) { /* Cambia el valor "768px" según tus necesidades */
+    .container-imagenes {
+        height: 49vh; /* Cambia la altura a automática para dispositivos móviles */
+    }
 }

@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front End 2</title>
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/form.css">
+    <!-- Estilos del background, navbar y footer -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Estilos de este html -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/86323d8bc2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -20,7 +24,7 @@
                 <li><strong><a class="nav-link" href="buscar.html">Buscar</a></strong></li>
            </ul>            
         </nav>
-        <a class="btn" href="#"><button>Contacto</button></a>
+        <a class="btn" id="contactoBtn" href="#"><button>Contacto</button></a>
 
         <a onclick="openNav()" class="menu"><button>Menu</button></a>
 
@@ -30,13 +34,33 @@
                 <a href="index.html">Inicio</a>
                 <a href="form.html">Formulario</a>
                 <a href="buscar.html">Buscar</a>
-                <a href="#">Contacto</a>
+                <a href="#" id="contactoMovil">Contacto</a>
             </div>
         </div>
+        <div id="modalContacto" class="modal">
+            <div class="modal-contenido">
+              <h2>Datos de contacto</h2>
+              <p>Nombre: Brian Alexander Diaz Ávila</p>
+              <p>Email: brian.diaz06@inacapmail.cl</p>
+              <p>Teléfono: +569 900049396</p>
+              <p><a href="https://www.linkedin.com/in/brian-diaz-avila/" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a></p>
+            </div>
+        </div>
+          
     </header>
     <hr class="navbar-limit">
 
+    <main>
+        <div class="main-container">
+            
 
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Alexander Diaz. Todos los derechos reservados.</p>
+    </footer>
     <script type="text/javascript" src="js/navbar.js"></script>
 
 </body>
