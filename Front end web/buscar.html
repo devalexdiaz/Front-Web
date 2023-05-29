@@ -56,10 +56,15 @@
                 <div class="container-texto">
                     <h1>Buscador</h1>
                 </div>
-
             </section>
             <section>
-                
+                <form action="/buscar" method="GET">
+                    <input type="text" name="query" placeholder="Ingrese su búsqueda" required>
+                    <div class="botones">
+                        <input type="submit" class="boton1" value="Buscar">
+                        <button><a class="a_boton" href="./index.html">Inicio</a></button>
+                    </div>
+                </form>
             </section>
         </div>
     </main>

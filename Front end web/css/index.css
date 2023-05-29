@@ -54,7 +54,7 @@
 }
 
 .container-imagenes img {
-    height: 69vh; /* Altura de 60 unidades de altura de viewport */
+    height: 69.2vh; /* Altura de 60 unidades de altura de viewport */
     position: relative; /* Añadimos posición relativa para permitir posicionar el texto */
     width: 30%; /* Anchura del 30% del contenedor */
     object-fit: cover; /* Ajuste del contenido de la imagen al contenedor */

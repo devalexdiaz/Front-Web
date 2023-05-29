@@ -229,12 +229,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--color-blanco);
+    background-color: var(--color-blanco); /* Define el color de fondo del modal como blanco */
     margin: 15% auto;
     padding: 2rem 4rem;
-    border: 2px solid var(--color-claro);
-    border-radius: 20px;
-    max-width: 90%;
+    border: 2px solid var(--color-claro); /* Define un borde de 2 píxeles sólido con un color claro */
+    border-radius: 20px; /* Define un radio de borde de 20 píxeles */
+    max-width: 90%; /* Establece un ancho máximo del 90% */
 }
   
 .modal-contenido h2 {
@@ -248,19 +248,19 @@ body {
     padding-bottom: 0.3rem;   
 }
 .modal-contenido a {
-    text-decoration: none;
+    text-decoration: none; /* Quita la decoración de subrayado en los enlaces dentro del contenido del modal */
 }
 
 .modal-contenido a:visited {
-    color: inherit;
+    color: inherit; /* Hereda el color del enlace visitado desde el estilo predeterminado */
 }
 
 footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: var(--color-oscuro-3);
+    bottom: 0; /* Posiciona el pie de página en la parte inferior */
+    left: 0; /* Alinea el pie de página a la izquierda */
+    width: 100%; /* Establece el ancho del pie de página al 100% del contenedor */
+    padding-bottom: 10px; /* Agrega un espacio inferior de 10px dentro del pie de página */
+    text-align: center; /* Centra el contenido del pie de página */
+    font-size: 14px; /* Establece el tamaño de fuente en 14px */
+    color: var(--color-oscuro-3); /* Establece el color de texto utilizando una variable personalizada */
 }

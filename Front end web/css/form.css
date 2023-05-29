@@ -14,7 +14,7 @@
     box-sizing: border-box; /* Incluir el padding en el tamaño total del div */
 }
 form {
-    min-height: 77.5vh;   
+    min-height: 77.7vh;   
 }
 /* SECCIÓN DE TEXTO */
 .container-texto{
@@ -38,65 +38,75 @@ form {
     border-style:dashed; /* Estilo de borde en guiones */
 }
 .container-form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom:4vh; /* margen interior */
+    display: flex; /* Utiliza un contenedor flexible */
+    flex-direction: row; /* Orientación de los elementos en una fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si no hay suficiente espacio */
+    padding-bottom:4vh; /* Margen interior en la parte inferior */
 }
 
 label{
-    margin:0.5rem 0;
-    font-size: 20px; /* Tamaño de fuente de 40 píxeles */
-    font-weight: bold;
-    display:block;
+    margin:0.5rem 0; /* Margen superior e inferior de 0.5 rem */
+    font-size: 20px; /* Tamaño de fuente de 20 píxeles */
+    font-weight: bold; /* Fuente en negrita */
+    display:block; /* Hace que el elemento sea de bloque, ocupando todo el ancho disponible */
 }
-.element{
-    padding: 5px;
-    margin: 5px;
-    display: flex;    
-    flex-wrap: wrap; 
-}
-.item1{
-    flex-grow:1;
-}
-.item2{
-    flex-grow:1;
-}
-.item3 {
-    flex-grow: 1;
-}
-input[type="text"],input[type="email"],input[type="number"],input[type="tel"],textarea,select{
-    padding: 0.7rem;
-    border: 3px solid var(--color-oscuro);
-    border-radius: 15px;
-    background-color: var(--color-blanco);
-    color: var(--color-oscuro-4);
-    width: 90%;
-}
-input[type="text"]:focus{
-    border-color:var(--color-claro);
-    outline: var(--color-claro);
-}
-input[type="email"]:focus{
-    border-color:var(--color-claro);
-    outline: var(--color-claro);
-}
-input[type="number"]:focus{
-    border-color:var(--color-claro);
-    outline: var(--color-claro);
-}
-input[type="tel"]:focus{
-    border-color:var(--color-claro);
-    outline: var(--color-claro);
-}
-textarea:focus{
-    border-color:var(--color-claro);
-    outline: var(--color-claro);
-}
-select:focus{
-    border-color:var(--color-claro);
-    outline: var(--color-claro);
 
+.element{
+    padding: 5px; /* Añade un espacio de 5 píxeles alrededor del contenido del elemento */
+    margin: 5px; /* Añade un espacio de 5 píxeles fuera del elemento */
+    display: flex; /* Establece el elemento como un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan en varias líneas si no caben en una sola línea */
+}
+
+.item1{
+    flex-grow:1; /* Hace que el elemento crezca tanto como sea posible dentro del contenedor flexible */
+}
+
+.item2{
+    flex-grow:1; /* Hace que el elemento crezca tanto como sea posible dentro del contenedor flexible */
+}
+
+.item3 {
+    flex-grow: 1; /* Hace que el elemento crezca tanto como sea posible dentro del contenedor flexible */
+}
+
+input[type="text"],input[type="email"],input[type="number"],input[type="tel"],textarea,select{
+    padding: 0.7rem; /* Añade un espacio de 0.7 rem alrededor del contenido de los elementos de entrada de texto, textarea y select */
+    border: 3px solid var(--color-oscuro); /* Establece un borde de 3 píxeles sólido con un color definido en una variable llamada "--color-oscuro" */
+    border-radius: 15px; /* Establece un radio de borde de 15 píxeles para que los bordes sean redondeados */
+    background-color: var(--color-blanco); /* Establece el color de fondo de los elementos en un color definido en una variable llamada "--color-blanco" */
+    color: var(--color-oscuro-4); /* Establece el color del texto de los elementos en un color definido en una variable llamada "--color-oscuro-4" */
+    width: 90%; /* Establece el ancho de los elementos en un 90% del ancho del contenedor padre */
+}
+
+input[type="text"]:focus{
+    border-color:var(--color-claro); /* Cambia el color del borde de los elementos de entrada de texto cuando están en foco a un color definido en una variable llamada "--color-claro" */
+    outline: var(--color-claro); /* Establece un contorno alrededor de los elementos de entrada de texto cuando están en foco en un color definido en una variable llamada "--color-claro" */
+}
+
+input[type="email"]:focus{
+    border-color:var(--color-claro); /* Cambia el color del borde de los elementos de entrada de correo electrónico cuando están en foco a un color definido en una variable llamada "--color-claro" */
+    outline: var(--color-claro); /* Establece un contorno alrededor de los elementos de entrada de correo electrónico cuando están en foco en un color definido en una variable llamada "--color-claro" */
+}
+
+input[type="number"]:focus{
+    border-color:var(--color-claro); /* Cambia el color del borde de los elementos de entrada de números cuando están en foco a un color definido en una variable llamada "--color-claro" */
+    outline: var(--color-claro); /* Establece un contorno alrededor de los elementos de entrada de números cuando están en foco en un color definido en una variable llamada "--color-claro" */
+}
+
+input[type="tel"]:focus{
+    border-color:var(--color-claro); /* Cambia el color del borde de los elementos de entrada de teléfono cuando están en foco a un color definido en una variable llamada "--color-claro" */
+    outline: var(--color-claro); /* Establece un contorno alrededor de los elementos de entrada de teléfono cuando están en foco en un color definido en una variable llamada "--color-claro" */
+}
+
+textarea:focus{
+    border-color:var(--color-claro); /* Cambia el color del borde de las áreas de texto cuando están en foco a un color definido en una variable llamada "--color-claro" */
+    outline: var(--color-claro); /* Establece un contorno alrededor de las áreas de texto cuando están en foco en un color definido en una variable llamada "--color-claro" */
+}
+
+select:focus{
+    border-color:var(--color-claro); /* Cambia el color del borde de los elementos de selección cuando están en foco a un color definido en una variable llamada "--color-claro" */
+    outline: var(--color-claro); /* Establece un contorno alrededor de los elementos de selección cuando están en foco en un color definido en una variable llamada "--color-claro" */
 }
 
 .botones {
@@ -107,71 +117,73 @@ select:focus{
     padding-bottom: 4vh; /* margen interior */
 }
 .botones button {
-    margin: 0 0.5rem;
-    text-align: center;
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    border: 3px solid var(--color-oscuro);
-    background-color: var(--color-oscuro);
-    font-weight: bold;
-    font-size:20px;
-    transition: all 0.3s;
+    margin: 0 0.5rem; /* Margen de 0 en la parte superior e inferior y 0.5 rem en los lados */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 0.5rem 1.5rem; /* Espaciado interno de 0.5 rem en la parte superior e inferior y 1.5 rem en los lados */
+    border-radius: 20px; /* Radio de borde de 20 píxeles para darle forma redondeada */
+    border: 3px solid var(--color-oscuro); /* Borde de 3 píxeles de grosor sólido con el color definido por la variable --color-oscuro */
+    background-color: var(--color-oscuro); /* Color de fondo definido por la variable --color-oscuro */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 20px; /* Tamaño de fuente de 20 píxeles */
+    transition: all 0.3s; /* Transición de todas las propiedades con una duración de 0.3 segundos */
 }
+
 .botones button a {
-    text-decoration: none;
-    color: var(--color-blanco);
+    text-decoration: none; /* Elimina la decoración de texto */
+    color: var(--color-blanco); /* Establece el color del texto */
 }
+
 .botones button:hover{
-    cursor: pointer;
-    background-color: var(--color-oscuro-2); 
-    border-color: var(--color-oscuro-2);
-    color: var(--color-blanco);
-    transform: scale(1.1);
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el mouse */
+    background-color: var(--color-oscuro-2); /* Establece el color de fondo al pasar el mouse */
+    border-color: var(--color-oscuro-2); /* Establece el color del borde al pasar el mouse */
+    color: var(--color-blanco); /* Establece el color del texto al pasar el mouse */
+    transform: scale(1.1); /* Aplica una escala de 1.1 al botón al pasar el mouse */
 }
+
 input[type="submit"]{
-    margin: 0 0.5rem;
-    text-decoration: none;
-    text-align: center;
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    color: var(--color-blanco);
-    border: 3px solid var(--color-oscuro);
-    background-color: var(--color-oscuro);
-    font-weight: bold;
-    font-size:20px;
-    transition: all 0.3s;
+    margin: 0 0.5rem; /* Establece los márgenes horizontal izquierdo y derecho */
+    text-decoration: none; /* Elimina la decoración de texto */
+    text-align: center; /* Centra el texto dentro del botón */
+    padding: 0.5rem 1.5rem; /* Establece el relleno interno del botón */
+    border-radius: 20px; /* Establece el radio de borde para crear esquinas redondeadas */
+    color: var(--color-blanco); /* Establece el color del texto */
+    border: 3px solid var(--color-oscuro); /* Establece el color y el grosor del borde */
+    background-color: var(--color-oscuro); /* Establece el color de fondo del botón */
+    font-weight: bold; /* Establece el grosor de la fuente */
+    font-size:20px; /* Establece el tamaño de la fuente */
+    transition: all 0.3s; /* Aplica una transición suave de 0.3 segundos a todas las propiedades */
 }
+
 input[type="submit"]:hover{
-    cursor: pointer;
-    background-color: var(--color-oscuro-2); 
-    border-color: var(--color-oscuro-2);
-    color: var(--color-blanco);
-    transform: scale(1.1);
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el mouse */
+    background-color: var(--color-oscuro-2); /* Establece el color de fondo al pasar el mouse */
+    border-color: var(--color-oscuro-2); /* Establece el color del borde al pasar el mouse */
+    color: var(--color-blanco); /* Establece el color del texto al pasar el mouse */
+    transform: scale(1.1); /* Aplica una escala de 1.1 al botón al pasar el mouse */
 }
 
-
-input[type="button"]{
-    margin: 0 0.5rem;
-    text-decoration: none;
-    text-align: center;
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    color: var(--color-blanco);
-    border: 3px solid var(--color-oscuro);
-    background-color: var(--color-oscuro);
-    font-weight: bold;
-    font-size:20px;
-    transition: all 0.3s;
-}
-input[type="button"]:hover{
-    cursor: pointer;
-    background-color: var(--color-oscuro-2); 
-    border-color: var(--color-oscuro-2);
-    color: var(--color-blanco);
-    transform: scale(1.1);
+input[type="button"] {
+    margin: 0 0.5rem; /* Margen horizontal de 0.5rem y margen vertical de 0 */
+    text-decoration: none; /* Sin decoración de texto */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 0.5rem 1.5rem; /* Relleno de 0.5rem arriba y abajo, y 1.5rem a la izquierda y derecha */
+    border-radius: 20px; /* Borde redondeado con un radio de 20px */
+    color: var(--color-blanco); /* Color de texto blanco */
+    border: 3px solid var(--color-oscuro); /* Borde de 3px sólido con color definido por la variable --color-oscuro */
+    background-color: var(--color-oscuro); /* Color de fondo definido por la variable --color-oscuro */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    transition: all 0.3s; /* Transición suave de 0.3s para todos los cambios */
 }
 
-
+input[type="button"]:hover {
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
+    background-color: var(--color-oscuro-2); /* Cambia el color de fondo a la variable --color-oscuro-2 */
+    border-color: var(--color-oscuro-2); /* Cambia el color del borde a la variable --color-oscuro-2 */
+    color: var(--color-blanco); /* Cambia el color de texto a blanco */
+    transform: scale(1.1); /* Escala el botón al 110% de su tamaño original */
+}
 
 .modal-form {
     display: none; /* Oculta el modal por defecto */
@@ -188,25 +200,26 @@ input[type="button"]:hover{
 }
   
 .modal-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--color-blanco);
-    margin: 15% auto;
-    padding: 2rem 4rem;
-    border: 2px solid var(--color-claro);
-    border-radius: 20px;
-    max-width: 90%;
+    display: flex; /* Configura el contenido del modal como un contenedor flexible */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    flex-direction: column; /* Establece la dirección de los elementos en una columna */
+    background-color: var(--color-blanco); /* Establece el color de fondo utilizando una variable CSS */
+    margin: 15% auto; /* Establece un margen superior e inferior del 15% y margen izquierdo y derecho automáticos */
+    padding: 2rem 4rem; /* Establece un espacio interno de 2 rem en la parte superior e inferior y 4 rem en los lados izquierdo y derecho */
+    border: 2px solid var(--color-claro); /* Establece un borde de 2 píxeles sólido utilizando una variable CSS */
+    border-radius: 20px; /* Establece un radio de borde de 20 píxeles */
+    max-width: 90%; /* Establece un ancho máximo del 90% del contenedor padre */
 }
-  
+
 .modal-content h2 {
-    font-size: 40px; /* Tamaño de fuente de 40 píxeles */
-    color: var(--color-oscuro); /* Color definido en la variable --color-oscuro */
-    font-weight: bold; /* Negrita */
+    font-size: 40px; /* Establece un tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro); /* Establece el color de texto utilizando una variable CSS */
+    font-weight: bold; /* Establece el grosor de la fuente en negrita */
 }
+
 .modal-content p {
-    font-size: 20px; /* Tamaño de fuente de 40 píxeles */
-    color: var(--color-oscuro-3); /* Color definido en la variable --color-oscuro */
-    padding-bottom: 0.3rem;   
+    font-size: 20px; /* Establece un tamaño de fuente de 20 píxeles */
+    color: var(--color-oscuro-3); /* Establece el color de texto utilizando una variable CSS */
+    padding-bottom: 0.3rem; /* Establece un espacio interno inferior de 0.3 rem */
 }
