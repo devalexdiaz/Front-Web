@@ -1,0 +1,212 @@
+/* Agregando los colores en variables para facilitar lectura y cambios del codigo*/
+:root {
+    --color-oscuro: #0741ad;
+    --color-oscuro-2: #084fd3;
+    --color-oscuro-3: #134074;
+    --color-oscuro-4: #011627;
+    --color-claro: #5BC0F8;
+    --color-blanco: #eaf4f4;
+}
+/* SECCIÓN DE TEXTO */
+/* Establecer el main-container como una flexbox */
+.main-container {
+    padding: 0 10%;  /* Añadir un espacio interno al div */
+    box-sizing: border-box; /* Incluir el padding en el tamaño total del div */
+}
+form {
+    min-height: 77.5vh;   
+}
+/* SECCIÓN DE TEXTO */
+.container-texto{
+    display: flex; /* Establece el elemento como un contenedor flexible */
+    flex-direction: column; /* Establece la dirección de los elementos secundarios en una columna */
+    align-items: center; /* Centra los elementos secundarios horizontalmente dentro del contenedor */
+    justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */
+    padding: 2vh 4vh 4vh; /* margen interior */
+}
+
+
+.container-texto h1{
+    font-size: 40px; /* Tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro); /* Color definido en la variable --color-oscuro */
+    font-weight: bold; /* Negrita */
+}
+.texto-hr {
+    width: 100%; /* Anchura del elemento al 100% del contenedor */
+    color: var(--color-claro); /* Color definido en la variable --color-claro */
+    margin-top: 1px; /* Margen superior de 1 píxel */
+    border-style:dashed; /* Estilo de borde en guiones */
+}
+.container-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom:4vh; /* margen interior */
+}
+
+label{
+    margin:0.5rem 0;
+    font-size: 20px; /* Tamaño de fuente de 40 píxeles */
+    font-weight: bold;
+    display:block;
+}
+.element{
+    padding: 5px;
+    margin: 5px;
+    display: flex;    
+    flex-wrap: wrap; 
+}
+.item1{
+    flex-grow:1;
+}
+.item2{
+    flex-grow:1;
+}
+.item3 {
+    flex-grow: 1;
+}
+input[type="text"],input[type="email"],input[type="number"],input[type="tel"],textarea,select{
+    padding: 0.7rem;
+    border: 3px solid var(--color-oscuro);
+    border-radius: 15px;
+    background-color: var(--color-blanco);
+    color: var(--color-oscuro-4);
+    width: 90%;
+}
+input[type="text"]:focus{
+    border-color:var(--color-claro);
+    outline: var(--color-claro);
+}
+input[type="email"]:focus{
+    border-color:var(--color-claro);
+    outline: var(--color-claro);
+}
+input[type="number"]:focus{
+    border-color:var(--color-claro);
+    outline: var(--color-claro);
+}
+input[type="tel"]:focus{
+    border-color:var(--color-claro);
+    outline: var(--color-claro);
+}
+textarea:focus{
+    border-color:var(--color-claro);
+    outline: var(--color-claro);
+}
+select:focus{
+    border-color:var(--color-claro);
+    outline: var(--color-claro);
+
+}
+
+.botones {
+    display: flex; /* Establece el elemento como un contenedor flexible */
+    flex-direction: row; /* Establece la dirección de los elementos secundarios en una fila */
+    align-items: center; /* Centra los elementos secundarios horizontalmente dentro del contenedor */
+    justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */
+    padding-bottom: 4vh; /* margen interior */
+}
+.botones button {
+    margin: 0 0.5rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    border: 3px solid var(--color-oscuro);
+    background-color: var(--color-oscuro);
+    font-weight: bold;
+    font-size:20px;
+    transition: all 0.3s;
+}
+.botones button a {
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+.botones button:hover{
+    cursor: pointer;
+    background-color: var(--color-oscuro-2); 
+    border-color: var(--color-oscuro-2);
+    color: var(--color-blanco);
+    transform: scale(1.1);
+}
+input[type="submit"]{
+    margin: 0 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    color: var(--color-blanco);
+    border: 3px solid var(--color-oscuro);
+    background-color: var(--color-oscuro);
+    font-weight: bold;
+    font-size:20px;
+    transition: all 0.3s;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--color-oscuro-2); 
+    border-color: var(--color-oscuro-2);
+    color: var(--color-blanco);
+    transform: scale(1.1);
+}
+
+
+input[type="button"]{
+    margin: 0 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    color: var(--color-blanco);
+    border: 3px solid var(--color-oscuro);
+    background-color: var(--color-oscuro);
+    font-weight: bold;
+    font-size:20px;
+    transition: all 0.3s;
+}
+input[type="button"]:hover{
+    cursor: pointer;
+    background-color: var(--color-oscuro-2); 
+    border-color: var(--color-oscuro-2);
+    color: var(--color-blanco);
+    transform: scale(1.1);
+}
+
+
+
+.modal-form {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Posición fija para que esté superpuesto en la página */
+    z-index: 1; /* Coloca el modal por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: auto; /* Permite el desplazamiento si el contenido del modal es demasiado grande */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+}
+  
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-blanco);
+    margin: 15% auto;
+    padding: 2rem 4rem;
+    border: 2px solid var(--color-claro);
+    border-radius: 20px;
+    max-width: 90%;
+}
+  
+.modal-content h2 {
+    font-size: 40px; /* Tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro); /* Color definido en la variable --color-oscuro */
+    font-weight: bold; /* Negrita */
+}
+.modal-content p {
+    font-size: 20px; /* Tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro-3); /* Color definido en la variable --color-oscuro */
+    padding-bottom: 0.3rem;   
+}

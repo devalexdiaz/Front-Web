@@ -52,9 +52,83 @@
 
     <main>
         <div class="main-container">
-            
-
-
+            <section>
+                <div class="container-texto">
+                    <h1>Formulario</h1>
+                    <hr class="texto-hr">
+                </div>
+            </section>
+            <form id="formulario">
+                <div class="container-form">
+                    <div class="item1">
+                        <div class="elemento">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="Nombre" name="nombre" required>
+                        </div>
+                        <div class="elemento">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" placeholder="Apellido" name="apellido" required>
+                        </div>
+                        <div class="elemento">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" placeholder="Teléfono" name="telefono" required>
+                        </div>
+                    </div>
+                    <div class="item2">
+                        <div class="elemento">
+                            <label for="ciudad">Ciudad:</label>
+                            <select id="ciudad" name="ciudad">
+                                <option value="" disabled selected>--Seleccione su ciudad--</option>
+                                <option value="Arica">Arica</option>
+                                <option value="Antofagasta">Antofagasta</option>
+                                <option value="Chillán">Chillán</option>
+                                <option value="Concepción">Concepción</option>
+                                <option value="Iquique">Iquique</option>
+                                <option value="La Serena">La Serena</option>
+                                <option value="Osorno">Osorno</option>
+                                <option value="Puerto Montt">Puerto Montt</option>
+                                <option value="Punta Arenas">Punta Arenas</option>
+                                <option value="Rancagua">Rancagua</option>
+                                <option value="Santiago">Santiago</option>
+                                <option value="Talca">Talca</option>
+                                <option value="Temuco">Temuco</option>
+                                <option value="Valdivia">Valdivia</option>
+                                <option value="Valparaíso">Valparaíso</option>
+                                <option value="Viña del Mar">Viña del Mar</option>
+                            </select>
+                        </div>
+                        <div class="elemento">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="elemento">
+                            <label for="edad">Edad:</label>
+                            <input type="number" id="edad" name="edad" required>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <div class="elemento">
+                            <label for="comentarios">Comentarios:</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+                        </div>
+                        <div class="elemento">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <input type="submit" value="Guardar">
+                    <button><a class="a_boton" href="./index.html">Inicio</a></button>
+                    <button><a class="a_boton" href="./buscar.html">Buscar</a></button>
+                </div>
+            </form>
+            <div id="modal-form" class="modal-form">
+                <div class="modal-content">
+                  <h2>¡Gracias por enviar tus datos!</h2>
+                  <p>Tu información ha sido recibida correctamente.</p>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -62,6 +136,7 @@
         <p>&copy; 2023 Alexander Diaz. Todos los derechos reservados.</p>
     </footer>
     <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/formModal.js"></script>
 
 </body>
 </html>
