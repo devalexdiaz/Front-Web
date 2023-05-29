@@ -1,0 +1,15 @@
+/* SECCIÓN DE TEXTO */
+.container-texto{
+    display: flex; /* Establece el elemento como un contenedor flexible */
+    flex-direction: column; /* Establece la dirección de los elementos secundarios en una columna */
+    align-items: center; /* Centra los elementos secundarios horizontalmente dentro del contenedor */
+    justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */
+    padding: 2vh; /* margen interior de la parte superior*/
+}
+
+.container-texto h1{
+    font-size: 40px; /* Tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro); /* Color definido en la variable --color-oscuro */
+    font-weight: bold; /* Negrita */
+}
+

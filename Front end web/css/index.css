@@ -12,7 +12,6 @@
 
 /* Establecer el main-container como una flexbox */
 .main-container {
-    height: calc(100vh - 14vh); /* Hacer que el div ocupe toda la altura de la pantalla */
     padding: 0 10%;  /* Añadir un espacio interno al div */
     box-sizing: border-box; /* Incluir el padding en el tamaño total del div */
 }
@@ -23,7 +22,7 @@
     flex-direction: column; /* Establece la dirección de los elementos secundarios en una columna */
     align-items: center; /* Centra los elementos secundarios horizontalmente dentro del contenedor */
     justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */
-    padding: 4vh; /* margen interior */
+    padding: 2vh 4vh 4vh; /* margen interior */
 }
 
 .container-texto h1{
@@ -51,16 +50,18 @@
 .container-imagenes {
     display: flex; /* Uso de flexbox para la disposición de los elementos */
     justify-content: space-between; /* Distribución equitativa de los elementos con espacios entre ellos */
-    height: 60vh; /* Altura de 60 unidades de altura de viewport */
+    flex-wrap: wrap; /* Comportamiento de envoltura de los elementos al disminuir el ancho de pantalla */
 }
 
 .container-imagenes img {
+    height: 69vh; /* Altura de 60 unidades de altura de viewport */
     position: relative; /* Añadimos posición relativa para permitir posicionar el texto */
     width: 30%; /* Anchura del 30% del contenedor */
     object-fit: cover; /* Ajuste del contenido de la imagen al contenedor */
     border-radius: 20px; /* Radio de borde de 20 píxeles para dar esquinas redondeadas */
     border: 2px solid var(--color-oscuro); /* Borde sólido de 2 píxeles con el color definido en la variable --color-oscuro */
     transition: all 0.3s; /* Transición de todas las propiedades con una duración de 0.3 segundos */
+    margin-bottom: 2rem; /* Agrega un margen inferior entre las imágenes */
 }
 
 .container-imagenes img:hover {
@@ -69,14 +70,18 @@
     filter: brightness(0.8); /* Aplicamos un filtro de brillo para oscurecer la imagen */
 }
 
-@media (max-width: 768px) { /* Cambia el valor "768px" según tus necesidades */
+@media (max-width: 868px) { /* Cambia el valor "768px" según tus necesidades */
     .container-imagenes {
-        height: 55vh; /* Cambia la altura a automática para dispositivos móviles */
+        height: auto; /* Cambia la altura a automática para dispositivos móviles */
+    }
+
+    .container-imagenes img {
+        width: 48%; /* Cambia el ancho de las imágenes para que se ajusten en dos columnas */
     }
 }
 
-@media (max-width: 400px) { /* Cambia el valor "768px" según tus necesidades */
-    .container-imagenes {
-        height: 49vh; /* Cambia la altura a automática para dispositivos móviles */
+@media (max-width: 530px) { /* Cambia el valor "400px" según tus necesidades */
+    .container-imagenes img {
+        width: 100%; /* Cambia el ancho de las imágenes para que se ajusten en una sola columna */
     }
 }
