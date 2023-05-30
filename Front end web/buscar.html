@@ -58,13 +58,18 @@
                 </div>
             </section>
             <section>
-                <form action="/buscar" method="GET">
-                    <input type="text" name="query" placeholder="Ingrese su búsqueda" required>
+                <form method="post" id="buscador">
+                    <input type="text" name="query" placeholder="Ingrese su búsqueda">
                     <div class="botones">
                         <input type="submit" class="boton1" value="Buscar">
-                        <button><a class="a_boton" href="./index.html">Inicio</a></button>
+                        <button type="button"><a class="a_boton" href="./index.html">Inicio</a></button>
                     </div>
                 </form>
+                <div id="buscar-modal">
+                    <div id="buscar-modal-content">
+                        
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -73,6 +78,7 @@
         <p>&copy; 2023 Alexander Diaz. Todos los derechos reservados.</p>
     </footer>
     <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/buscar.js"></script>
 
 </body>
 </html>

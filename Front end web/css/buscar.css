@@ -23,14 +23,14 @@
     font-weight: bold; /* Negrita */
 }
 
+/* Contenedor main */
 .main-container {
     padding: 0 10%;  /* Añadir un espacio interno al div */
     box-sizing: border-box; /* Incluir el padding en el tamaño total del div */
     height: 89.2vh; /* Altura minima del formulario */
 }
 
-
-
+/* Formulario y botones */
 form {
     width: 100%;
     display: flex; /* Establece el elemento como un contenedor flexible */
@@ -39,42 +39,39 @@ form {
     justify-content: center; /* Centra los elementos secundarios verticalmente dentro del contenedor */   
 }
 
-.botones {
-    align-items: center;
-}
-
 input[type="text"] {
-    width: 100%;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 20px;
-    background-color: var(--color-blanco);
-    border: 4px solid var(--color-oscuro);
-    outline: none;
-    color: var(--color-oscuro-4);
-    text-transform: uppercase;
-    font-weight: bold;
+    width: 100%; /* Ancho del input al 100% */
+    padding: 1.5rem; /* Espaciado interno */
+    margin-bottom: 2rem; /* Margen inferior */
+    border-radius: 20px; /* Borde redondeado */
+    background-color: var(--color-blanco); /* Color de fondo */
+    border: 4px solid var(--color-oscuro); /* Borde sólido */
+    outline: none; /* Quita el contorno al hacer foco */
+    color: var(--color-oscuro-4); /* Color de texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    font-weight: bold; /* Negrita */
 }
 
 input[type="text"]:focus {
-    border-color: var(--color-claro);
+    border-color: var(--color-claro); /* Cambia el color del borde al hacer foco */
 }
 
 .boton1 {
-    margin-right: 2rem;
+    margin-right: 2rem; /* Margen derecho */
 }
 
 input[type="submit"] {
-    padding: 0.8rem 2rem;
-    color: var(--color-blanco);
-    border-radius: 25px;
-    font-weight: bold;
+    padding: 0.8rem 2rem; /* Añade un relleno de 0.8 rem en la parte superior e inferior y 2 rem en los lados */
+    color: var(--color-blanco); /* Establece el color del texto utilizando la variable --color-blanco */
+    border-radius: 25px; /* Establece un radio de borde de 25 píxeles para crear esquinas redondeadas */
+    font-weight: bold; /* Establece el peso de la fuente en negrita */
     border: 3px solid var(--color-oscuro); /* Borde de 3 píxeles de grosor sólido con el color definido por la variable --color-oscuro */
     background-color: var(--color-oscuro); /* Color de fondo definido por la variable --color-oscuro */
     font-size: 20px; /* Tamaño de fuente de 20 píxeles */
     transition: all 0.3s; /* Transición de todas las propiedades con una duración de 0.3 segundos */
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Añade un margen inferior de 1 rem */
 }
+
 
 input[type="submit"]:hover {
     cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el mouse */
@@ -105,4 +102,48 @@ input[type="submit"]:hover {
     border-color: var(--color-oscuro-2); /* Establece el color del borde al pasar el mouse */
     color: var(--color-blanco); /* Establece el color del texto al pasar el mouse */
     transform: scale(1.1); /* Aplica una escala de 1.1 al botón al pasar el mouse */
+}
+
+
+
+/* Modal buscador */
+
+#buscar-modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Posición fija para que esté superpuesto en la página */
+    z-index: 1; /* Coloca el modal por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: auto; /* Permite el desplazamiento si el contenido del modal es demasiado grande */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+}
+  
+#buscar-modal-content {
+    display: flex; /* Configura el contenido del modal como un contenedor flexible */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    flex-direction: column; /* Establece la dirección de los elementos en una columna */
+    background-color: var(--color-blanco); /* Establece el color de fondo utilizando una variable CSS */
+    margin: 15% auto; /* Establece un margen superior e inferior del 15% y margen izquierdo y derecho automáticos */
+    padding: 2rem 4rem; /* Establece un espacio interno de 2 rem en la parte superior e inferior y 4 rem en los lados izquierdo y derecho */
+    border: 2px solid var(--color-claro); /* Establece un borde de 2 píxeles sólido utilizando una variable CSS */
+    border-radius: 20px; /* Establece un radio de borde de 20 píxeles */
+    max-width: 90%; /* Establece un ancho máximo del 90% del contenedor padre */
+}
+
+#buscar-modal-content h2 {
+    font-size: 40px; /* Establece un tamaño de fuente de 40 píxeles */
+    color: var(--color-oscuro); /* Establece el color de texto utilizando una variable CSS */
+    font-weight: bold; /* Establece el grosor de la fuente en negrita */
+    padding-bottom: 0.3rem; /* Establece un espacio interno inferior de 0.3 rem */
+}
+
+#buscar-modal-content p {
+    font-size: 20px; /* Establece un tamaño de fuente de 20 píxeles */
+    color: var(--color-oscuro-3); /* Establece el color de texto utilizando una variable CSS */
+    padding-bottom: 0.3rem; /* Establece un espacio interno inferior de 0.3 rem */
 }

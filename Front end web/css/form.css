@@ -216,6 +216,8 @@ input[type="button"]:hover {
     font-size: 40px; /* Establece un tamaño de fuente de 40 píxeles */
     color: var(--color-oscuro); /* Establece el color de texto utilizando una variable CSS */
     font-weight: bold; /* Establece el grosor de la fuente en negrita */
+    padding-bottom: 0.3rem; /* Establece un espacio interno inferior de 0.3 rem */
+
 }
 
 .modal-content p {
